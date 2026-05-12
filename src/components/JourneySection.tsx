@@ -108,10 +108,10 @@ export function JourneySection() {
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 grid md:grid-cols-12 gap-10 items-end">
           <div className="md:col-span-8">
             <div className="eyebrow text-ember mb-6">Section 03 — Customer Journey</div>
-            <h1 className="font-display text-[clamp(2.5rem,7.5vw,7.5rem)] leading-[0.92] text-balance">
+            <h2 className="font-display text-[clamp(2.5rem,7.5vw,7.5rem)] leading-[0.92] text-balance">
               Five moments<br />
               <span className="italic text-paper/70">that change everything.</span>
-            </h1>
+            </h2>
           </div>
           <div className="md:col-span-4">
             <p className="text-paper/70 text-lg leading-relaxed text-pretty">
