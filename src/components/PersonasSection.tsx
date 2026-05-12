@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import personaRenovator from "@/assets/persona-renovator.jpg";
@@ -7,28 +6,6 @@ import personaFarmer from "@/assets/persona-farmer.jpg";
 import personaFamily from "@/assets/persona-family.jpg";
 import personaRoadtrip from "@/assets/persona-roadtrip.jpg";
 import personaTeen from "@/assets/persona-teen.jpg";
-import { SiteNav } from "@/components/SiteNav";
-import { SiteFooter } from "@/components/SiteFooter";
-
-export const Route = createFileRoute("/personas")({
-  head: () => ({
-    meta: [
-      { title: "Audience Personas — LDV Automotive" },
-      {
-        name: "description",
-        content:
-          "Six emotionally-real audiences shaping the next generation of automotive ownership. An interactive editorial study.",
-      },
-      { property: "og:title", content: "Audience Personas — LDV Automotive" },
-      {
-        property: "og:description",
-        content:
-          "Meet the First-Home Renovator, Weekend Adventurer, Hobby Farmer, Blended Household, Road Trip Romantic and Teen Driver's Parent.",
-      },
-    ],
-  }),
-  component: PersonasPage,
-});
 
 type Persona = {
   id: string;
@@ -274,23 +251,20 @@ const personas: Persona[] = [
   },
 ];
 
-function PersonasPage() {
+export function PersonasSection() {
   const [active, setActive] = useState<Persona | null>(null);
 
   return (
-    <div className="min-h-screen bg-cream text-ink">
-      <SiteNav scheme="light" />
-
-      {/* Header */}
-      <section className="pt-40 pb-20 md:pt-48 md:pb-28">
+    <section id="personas" className="min-h-screen scroll-mt-24 bg-cream text-ink py-28 md:py-36">
+      <div>
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
           <div className="grid md:grid-cols-12 gap-10 items-end">
             <div className="md:col-span-7">
               <div className="eyebrow text-ember mb-6">Section 02 — Personas</div>
-              <h1 className="font-display text-[clamp(2.5rem,7vw,7rem)] leading-[0.95] text-balance">
+              <h2 className="font-display text-[clamp(2.5rem,7vw,7rem)] leading-[0.95] text-balance">
                 Six humans.<br />
                 <span className="italic text-stone">One question.</span>
-              </h1>
+              </h2>
             </div>
             <div className="md:col-span-5">
               <p className="text-lg text-ink-soft leading-relaxed text-pretty">
@@ -301,10 +275,10 @@ function PersonasPage() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Editorial grid */}
-      <section className="pb-32">
+      <div className="pb-8">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {personas.map((p, i) => (
@@ -356,15 +330,14 @@ function PersonasPage() {
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Modal */}
       <AnimatePresence>
         {active && <PersonaPanel persona={active} onClose={() => setActive(null)} />}
       </AnimatePresence>
 
-      <SiteFooter />
-    </div>
+    </section>
   );
 }
 

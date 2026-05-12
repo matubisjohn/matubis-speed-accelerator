@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import journeyItch from "@/assets/journey-itch.jpg";
@@ -6,28 +5,6 @@ import journeyWindow from "@/assets/journey-window.jpg";
 import journeyTyres from "@/assets/journey-tyres.jpg";
 import journeySigning from "@/assets/journey-signing.jpg";
 import journeyRoad from "@/assets/journey-road.jpg";
-import { SiteNav } from "@/components/SiteNav";
-import { SiteFooter } from "@/components/SiteFooter";
-
-export const Route = createFileRoute("/journey")({
-  head: () => ({
-    meta: [
-      { title: "The Customer Journey — LDV Automotive" },
-      {
-        name: "description",
-        content:
-          "Five emotional stages in the decision journey of the First-Home Renovator. An immersive interactive case study.",
-      },
-      { property: "og:title", content: "The Customer Journey — LDV Automotive" },
-      {
-        property: "og:description",
-        content:
-          "From The Itch to Road Testing Life — trace the emotional and rational arcs behind a major automotive decision.",
-      },
-    ],
-  }),
-  component: JourneyPage,
-});
 
 type Stage = {
   n: string;
@@ -115,17 +92,15 @@ const stages: Stage[] = [
   },
 ];
 
-function JourneyPage() {
+export function JourneySection() {
   const trackRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: trackRef, offset: ["start end", "end start"] });
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <div className="min-h-screen bg-paper text-ink">
-      <SiteNav scheme="auto" />
-
+    <section id="journey" className="min-h-screen scroll-mt-24 bg-paper text-ink">
       {/* Header — cinematic */}
-      <section className="relative bg-ink text-paper pt-40 pb-32 md:pt-52 md:pb-44 overflow-hidden grain">
+      <div className="relative bg-ink text-paper pt-28 pb-32 md:pt-36 md:pb-44 overflow-hidden grain">
         <div
           className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full opacity-25 blur-3xl"
           style={{ background: "var(--gradient-ember)" }}
@@ -133,10 +108,10 @@ function JourneyPage() {
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 grid md:grid-cols-12 gap-10 items-end">
           <div className="md:col-span-8">
             <div className="eyebrow text-ember mb-6">Section 03 — Customer Journey</div>
-            <h1 className="font-display text-[clamp(2.5rem,7.5vw,7.5rem)] leading-[0.92] text-balance">
+            <h2 className="font-display text-[clamp(2.5rem,7.5vw,7.5rem)] leading-[0.92] text-balance">
               Five moments<br />
               <span className="italic text-paper/70">that change everything.</span>
-            </h1>
+            </h2>
           </div>
           <div className="md:col-span-4">
             <p className="text-paper/70 text-lg leading-relaxed text-pretty">
@@ -150,10 +125,10 @@ function JourneyPage() {
         <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 mt-20">
           <EmotionalGraph stages={stages} />
         </div>
-      </section>
+      </div>
 
       {/* Sticky timeline */}
-      <section ref={trackRef} className="relative">
+      <div ref={trackRef} className="relative">
         {/* Spine */}
         <div className="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-px bg-ink/10 hidden md:block">
           <motion.div
@@ -165,10 +140,10 @@ function JourneyPage() {
         {stages.map((s, i) => (
           <StageBlock key={s.n} stage={s} index={i} />
         ))}
-      </section>
+      </div>
 
       {/* Touchpoint ecosystem */}
-      <section className="bg-cream py-32">
+      <div className="bg-cream py-32">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
           <div className="eyebrow text-ember mb-6">Touchpoint ecosystem</div>
           <h2 className="font-display text-[clamp(2rem,5vw,4.5rem)] leading-[1] max-w-3xl text-balance">
@@ -208,10 +183,8 @@ function JourneyPage() {
             ))}
           </div>
         </div>
-      </section>
-
-      <SiteFooter />
-    </div>
+      </div>
+    </section>
   );
 }
 
@@ -220,7 +193,7 @@ function StageBlock({ stage, index }: { stage: Stage; index: number }) {
   const flip = index % 2 === 1;
 
   return (
-    <section
+    <article
       className={`relative py-28 md:py-40 overflow-hidden ${
         isDark ? "bg-ink text-paper grain" : "bg-paper text-ink"
       }`}
@@ -307,7 +280,7 @@ function StageBlock({ stage, index }: { stage: Stage; index: number }) {
           </motion.div>
         </div>
       </div>
-    </section>
+    </article>
   );
 }
 
