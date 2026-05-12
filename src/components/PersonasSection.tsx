@@ -261,10 +261,10 @@ export function PersonasSection() {
           <div className="grid md:grid-cols-12 gap-10 items-end">
             <div className="md:col-span-7">
               <div className="eyebrow text-ember mb-6">Section 02 — Personas</div>
-              <h1 className="font-display text-[clamp(2.5rem,7vw,7rem)] leading-[0.95] text-balance">
+              <h2 className="font-display text-[clamp(2.5rem,7vw,7rem)] leading-[0.95] text-balance">
                 Six humans.<br />
                 <span className="italic text-stone">One question.</span>
-              </h1>
+              </h2>
             </div>
             <div className="md:col-span-5">
               <p className="text-lg text-ink-soft leading-relaxed text-pretty">
@@ -275,7 +275,7 @@ export function PersonasSection() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Editorial grid */}
       <div className="pb-8">
