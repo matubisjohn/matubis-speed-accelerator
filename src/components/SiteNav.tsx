@@ -1,15 +1,13 @@
-import { Link, useLocation } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 const links = [
-  { to: "/", label: "Overview" },
-  { to: "/personas", label: "Personas" },
-  { to: "/journey", label: "Journey" },
+  { href: "#overview", label: "Overview" },
+  { href: "#personas", label: "Personas" },
+  { href: "#journey", label: "Journey" },
 ] as const;
 
 export function SiteNav({ scheme = "auto" }: { scheme?: "dark" | "light" | "auto" }) {
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -18,7 +16,7 @@ export function SiteNav({ scheme = "auto" }: { scheme?: "dark" | "light" | "auto
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const dark = scheme === "dark" || (scheme === "auto" && location.pathname === "/" && !scrolled);
+  const dark = scheme === "dark" || (scheme === "auto" && !scrolled);
 
   return (
     <header
@@ -36,7 +34,7 @@ export function SiteNav({ scheme = "auto" }: { scheme?: "dark" | "light" | "auto
         }`}
         style={scrolled ? { maxWidth: 1100 } : undefined}
       >
-        <Link to="/" className="flex items-center gap-2 group">
+        <a href="#overview" className="flex items-center gap-2 group">
           <div
             className={`h-8 w-8 rounded-md flex items-center justify-center font-display text-sm transition-colors ${
               dark ? "bg-paper text-ink" : "bg-ink text-paper"
@@ -58,33 +56,28 @@ export function SiteNav({ scheme = "auto" }: { scheme?: "dark" | "light" | "auto
               Automotive
             </div>
           </div>
-        </Link>
+        </a>
 
         <nav className="hidden md:flex items-center gap-1">
           {links.map((l) => {
-            const active = location.pathname === l.to;
             return (
-              <Link
-                key={l.to}
-                to={l.to}
+              <a
+                key={l.href}
+                href={l.href}
                 className={`px-4 py-2 text-sm rounded-full transition-all ${
-                  active
-                    ? dark
-                      ? "bg-paper/10 text-paper"
-                      : "bg-ink/5 text-ink"
-                    : dark
+                  dark
                     ? "text-paper/70 hover:text-paper"
                     : "text-ink/60 hover:text-ink"
                 }`}
               >
                 {l.label}
-              </Link>
+              </a>
             );
           })}
         </nav>
 
-        <Link
-          to="/journey"
+        <a
+          href="#journey"
           className={`hidden md:inline-flex items-center gap-2 text-sm rounded-full px-5 py-2.5 transition-all ${
             dark
               ? "bg-paper text-ink hover:bg-cream"
@@ -93,7 +86,7 @@ export function SiteNav({ scheme = "auto" }: { scheme?: "dark" | "light" | "auto
         >
           Begin the journey
           <span aria-hidden>→</span>
-        </Link>
+        </a>
       </div>
     </header>
   );
