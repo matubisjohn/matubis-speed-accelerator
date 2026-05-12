@@ -1,11 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import heroTruck from "@/assets/hero-truck.jpg";
-import personaRenovator from "@/assets/persona-renovator.jpg";
-import personaAdventurer from "@/assets/persona-adventurer.jpg";
-import personaFarmer from "@/assets/persona-farmer.jpg";
-import personaRoadtrip from "@/assets/persona-roadtrip.jpg";
+import { JourneySection } from "@/components/JourneySection";
+import { PersonasSection } from "@/components/PersonasSection";
 import { SiteNav } from "@/components/SiteNav";
 import { SiteFooter } from "@/components/SiteFooter";
 
@@ -29,13 +27,6 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const previewPersonas = [
-  { id: "01", name: "The First-Home Renovator", img: personaRenovator, tag: "Aspiration · Capability" },
-  { id: "02", name: "The Weekend Adventurer", img: personaAdventurer, tag: "Freedom · Belonging" },
-  { id: "03", name: "The Hobby Farmer", img: personaFarmer, tag: "Reinvention · Pride" },
-  { id: "05", name: "The Road Trip Romantic", img: personaRoadtrip, tag: "Discovery · Intimacy" },
-];
-
 function HomePage() {
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -52,6 +43,7 @@ function HomePage() {
 
       {/* HERO */}
       <section
+        id="overview"
         ref={heroRef}
         className="relative h-[100svh] w-full overflow-hidden bg-ink text-paper grain"
       >
@@ -104,19 +96,19 @@ function HomePage() {
               vehicles people choose to live with.
             </p>
             <div className="md:col-span-6 md:justify-self-end flex flex-wrap gap-3">
-              <Link
-                to="/personas"
+              <a
+                href="#personas"
                 className="inline-flex items-center gap-3 rounded-full bg-paper text-ink px-7 py-4 text-sm font-medium hover:bg-cream transition-colors"
               >
                 Meet the personas
                 <span aria-hidden>→</span>
-              </Link>
-              <Link
-                to="/journey"
+              </a>
+              <a
+                href="#journey"
                 className="inline-flex items-center gap-3 rounded-full glass px-7 py-4 text-sm text-paper hover:bg-paper/10 transition-colors"
               >
                 Trace the journey
-              </Link>
+              </a>
             </div>
           </motion.div>
         </motion.div>
