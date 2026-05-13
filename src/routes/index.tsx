@@ -79,7 +79,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.35 }}
-            className="font-display text-[clamp(2.75rem,8vw,8rem)] leading-[0.92] tracking-tight max-w-5xl text-balance"
+            className="font-display text-[clamp(2.75rem,8vw,8rem)] leading-[0.92] tracking-tight max-w-5xl text-balance my-[28px]"
           >
             Understanding<br />
             <span className="italic font-light text-paper/90">the modern</span> buyer.
@@ -91,9 +91,7 @@ function HomePage() {
             className="mt-10 grid md:grid-cols-12 gap-8 items-end"
           >
             <p className="md:col-span-6 text-paper/70 text-lg md:text-xl leading-relaxed text-pretty">
-              For LDV Automotive — an exploration of six audiences, five
-              decisive moments, and the emotional architecture behind the
-              vehicles people choose to live with.
+              Itch to ignition.
             </p>
             <div className="md:col-span-6 md:justify-self-end flex flex-wrap gap-3">
               <a
