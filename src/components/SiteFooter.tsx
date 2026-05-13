@@ -20,14 +20,14 @@ export function SiteFooter() {
           <div className="md:col-span-4">
             <div className="eyebrow text-paper/40 mb-4">A strategy showcase</div>
             <p className="text-paper/60 text-sm leading-relaxed">
-              A presentation of audience psychology and emotional decision
-              journeys for a new generation of automotive ownership.
+              A deep dive into automotive buyer behavior, audience personas,
+              and customer journeys in the digital age.
             </p>
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-paper/10 flex flex-wrap justify-between gap-4 text-xs text-paper/40 font-mono">
-          <span>© {new Date().getFullYear()} LDV Automotive — Fictional case study.</span>
-          <span>Cinematic edition · v1</span>
+          <span>© {new Date().getFullYear()} LDV Automotive</span>
+          <span>Fictional Case Study</span>
         </div>
       </div>
     </footer>
