@@ -126,26 +126,17 @@ function HomePage() {
 
       {/* THESIS */}
       <section className="relative bg-paper py-32 md:py-44">
-        <div className="mx-auto max-w-[1400px] px-6 lg:px-10 grid md:grid-cols-12 gap-12">
-          <div className="md:col-span-4">
-            <div className="eyebrow text-ember mb-6">The thesis</div>
-            <p className="font-mono text-xs text-stone leading-relaxed">
-              01 / Three sections.<br />
-              02 / Six audiences.<br />
-              03 / Five decisive moments.
-            </p>
-          </div>
-          <div className="md:col-span-8">
-            <h2 className="font-display text-[clamp(2rem,5vw,4.5rem)] leading-[1.02] text-balance">
-              The vehicle is no longer the product.
-              <span className="italic text-stone"> The life around it is.</span>
-            </h2>
-            <p className="mt-10 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl text-pretty">
-              Today's buyers don't shop for trims and tow ratings. They shop for
-              identity, freedom, and the version of themselves they're becoming.
-              This study unpacks how that decision actually happens.
-            </p>
-          </div>
+        <div className="mx-auto max-w-4xl px-6 lg:px-10 text-center flex flex-col items-center">
+          <div className="eyebrow text-ember mb-6">The thesis</div>
+          <h2 className="font-display text-[clamp(2rem,5vw,4.5rem)] leading-[1.02] text-balance">
+            The vehicle is no longer the product.
+            <span className="italic text-stone"> The life around it is.</span>
+          </h2>
+          <p className="mt-10 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl text-pretty">
+            Today's buyers don't shop for trims and tow ratings. They shop for
+            identity, freedom, and the version of themselves they're becoming.
+            This study unpacks how that decision actually happens.
+          </p>
         </div>
       </section>
 

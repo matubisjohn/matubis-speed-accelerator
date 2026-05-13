@@ -105,20 +105,15 @@ export function JourneySection() {
           className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full opacity-25 blur-3xl"
           style={{ background: "var(--gradient-ember)" }}
         />
-        <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10 grid md:grid-cols-12 gap-10 items-end">
-          <div className="md:col-span-8">
-            <div className="eyebrow text-ember mb-6">Section 03 — Customer Journey</div>
-            <h2 className="font-display text-[clamp(2.5rem,7.5vw,7.5rem)] leading-[0.92] text-balance">
-              Five moments<br />
-              <span className="italic text-paper/70">that change everything.</span>
-            </h2>
-          </div>
-          <div className="md:col-span-4">
-            <p className="text-paper/70 text-lg leading-relaxed text-pretty">
-              The 12-month emotional arc of The First-Home Renovator —
-              from the first quiet itch to road-testing a new way of living.
-            </p>
-          </div>
+        <div className="relative mx-auto max-w-[1400px] px-6 lg:px-10">
+          <div className="eyebrow text-ember mb-6">Customer Journey</div>
+          <h2 className="font-display text-[clamp(2.5rem,7.5vw,7.5rem)] leading-[0.92] text-balance max-w-5xl">
+            5 Stages: <span className="italic text-paper/70">From intent to ignition</span>
+          </h2>
+          <p className="mt-8 md:mt-10 max-w-2xl text-paper/70 text-lg leading-relaxed text-pretty">
+            The 12-month emotional arc of The First-Home Renovator —
+            from the first quiet itch to road-testing a new way of living.
+          </p>
         </div>
 
         {/* Emotional graph preview */}
