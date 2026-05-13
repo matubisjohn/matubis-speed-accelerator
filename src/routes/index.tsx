@@ -100,7 +100,6 @@ function HomePage() {
                 className="inline-flex items-center gap-3 rounded-full bg-paper text-ink px-7 py-4 text-sm font-medium hover:bg-cream transition-colors"
               >
                 Meet the personas
-                <span aria-hidden>→</span>
               </a>
               <a
                 href="#journey"
