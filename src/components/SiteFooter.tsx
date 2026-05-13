@@ -13,7 +13,7 @@ export function SiteFooter() {
             <div className="eyebrow text-paper/40 mb-4">Explore</div>
             <ul className="space-y-2 text-paper/80">
               <li><a href="#overview" className="hover:text-paper">Overview</a></li>
-              <li><a href="#personas" className="hover:text-paper">User Personas</a></li>
+              <li><a href="#personas" className="hover:text-paper">Personas</a></li>
               <li><a href="#journey" className="hover:text-paper">Journey</a></li>
             </ul>
           </div>

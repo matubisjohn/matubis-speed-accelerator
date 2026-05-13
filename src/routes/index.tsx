@@ -64,7 +64,7 @@ function HomePage() {
 
         <motion.div
           style={{ opacity }}
-          className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10 h-full flex flex-col justify-end pb-24"
+          className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10 h-full flex flex-col justify-center"
         >
           <motion.div
             initial={{ opacity: 0, y: 24 }}
