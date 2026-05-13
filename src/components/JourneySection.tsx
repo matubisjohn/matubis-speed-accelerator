@@ -140,7 +140,7 @@ export function JourneySection() {
       {/* Touchpoint ecosystem */}
       <div className="bg-cream py-32">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
-          <div className="eyebrow text-ember mb-6">Touchpoint ecosystem</div>
+          <div className="eyebrow text-ember mb-6">Touchpoints</div>
           <h2 className="font-display text-[clamp(2rem,5vw,4.5rem)] leading-[1] max-w-3xl text-balance">
             Where the decision is actually made.
           </h2>
