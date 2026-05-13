@@ -259,7 +259,7 @@ export function PersonasSection() {
       <div>
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
           <div>
-            <div className="eyebrow text-ember mb-6">Personas</div>
+            <div className="eyebrow text-ember mb-6">User Personas</div>
             <h2 className="font-display text-[clamp(2.5rem,7vw,7rem)] leading-[0.95] text-balance">
               Six humans. <span className="italic text-stone">One wish.</span>
             </h2>
