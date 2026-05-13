@@ -91,9 +91,8 @@ function HomePage() {
             className="mt-10 grid md:grid-cols-12 gap-8 items-end"
           >
             <p className="md:col-span-6 text-paper/70 text-lg md:text-xl leading-relaxed text-pretty">
-              For LDV Automotive — an exploration of six audiences, five
-              decisive moments, and the emotional architecture behind the
-              vehicles people choose to live with.
+              Exploring the emotional journeys, lifestyle aspirations, and
+              decision-making psychology of today's automotive consumers.
             </p>
             <div className="md:col-span-6 md:justify-self-end flex flex-wrap gap-3">
               <a
@@ -101,7 +100,6 @@ function HomePage() {
                 className="inline-flex items-center gap-3 rounded-full bg-paper text-ink px-7 py-4 text-sm font-medium hover:bg-cream transition-colors"
               >
                 Meet the personas
-                <span aria-hidden>→</span>
               </a>
               <a
                 href="#journey"
