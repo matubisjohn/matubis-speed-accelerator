@@ -258,27 +258,22 @@ export function PersonasSection() {
     <section id="personas" className="min-h-screen scroll-mt-24 bg-cream text-ink py-28 md:py-36">
       <div>
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
-          <div className="grid md:grid-cols-12 gap-10 items-end">
-            <div className="md:col-span-7">
-              <div className="eyebrow text-ember mb-6">Section 02 — Personas</div>
-              <h2 className="font-display text-[clamp(2.5rem,7vw,7rem)] leading-[0.95] text-balance">
-                Six humans.<br />
-                <span className="italic text-stone">One question.</span>
-              </h2>
-            </div>
-            <div className="md:col-span-5">
-              <p className="text-lg text-ink-soft leading-relaxed text-pretty">
-                Each persona is built from real behavioural patterns,
-                emotional drivers, and digital habits. Open one to step
-                inside the life that shapes the decision.
-              </p>
-            </div>
+          <div>
+            <div className="eyebrow text-ember mb-6">Personas</div>
+            <h2 className="font-display text-[clamp(2.5rem,7vw,7rem)] leading-[0.95] text-balance">
+              Six humans. <span className="italic text-stone">One wish.</span>
+            </h2>
+            <p className="mt-8 md:mt-10 max-w-2xl text-lg text-ink-soft leading-relaxed text-pretty">
+              Each persona is built from real behavioural patterns,
+              emotional drivers, and digital habits. Open one to step
+              inside the life that shapes the decision.
+            </p>
           </div>
         </div>
       </div>
 
       {/* Editorial grid */}
-      <div className="pb-8">
+      <div className="pt-16 md:pt-20 pb-8">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {personas.map((p, i) => (
@@ -301,7 +296,7 @@ export function PersonasSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent opacity-90" />
                   <div className="absolute top-5 left-5 right-5 flex justify-between items-start">
                     <span className="eyebrow text-paper bg-ink/30 backdrop-blur px-3 py-1.5 rounded-full">
-                      Persona {p.id}
+                      Persona {parseInt(p.id, 10)}
                     </span>
                     <span className="text-paper/80 text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity">
                       Open →
@@ -367,7 +362,7 @@ function PersonaPanel({ persona, onClose }: { persona: Persona; onClose: () => v
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-8 text-paper">
-              <div className="eyebrow text-ember mb-3">Persona {persona.id}</div>
+              <div className="eyebrow text-ember mb-3">Persona {parseInt(persona.id, 10)}</div>
               <h2 className="font-display text-4xl md:text-5xl leading-[0.95] text-balance">
                 {persona.name}
               </h2>

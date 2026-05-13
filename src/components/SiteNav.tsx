@@ -58,7 +58,7 @@ export function SiteNav({ scheme = "auto" }: { scheme?: "dark" | "light" | "auto
           </div>
         </a>
 
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-1 ml-auto">
           {links.map((l) => {
             return (
               <a
@@ -75,18 +75,6 @@ export function SiteNav({ scheme = "auto" }: { scheme?: "dark" | "light" | "auto
             );
           })}
         </nav>
-
-        <a
-          href="#journey"
-          className={`hidden md:inline-flex items-center gap-2 text-sm rounded-full px-5 py-2.5 transition-all ${
-            dark
-              ? "bg-paper text-ink hover:bg-cream"
-              : "bg-ink text-paper hover:bg-ink-soft"
-          }`}
-        >
-          Begin the journey
-          <span aria-hidden>→</span>
-        </a>
       </div>
     </header>
   );
