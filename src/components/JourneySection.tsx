@@ -141,10 +141,10 @@ export function JourneySection() {
       <div className="bg-cream py-32">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
           <div className="eyebrow text-ember mb-6">Touchpoints</div>
-          <h2 className="font-display text-[clamp(2rem,5vw,4.5rem)] leading-[1] max-w-3xl text-balance">
+          <h2 className="font-display text-[clamp(2rem,5vw,4.5rem)] leading-[1] max-w-6xl text-balance">
             Where the decision is actually made.
           </h2>
-          <p className="mt-6 text-ink-soft text-lg max-w-2xl text-pretty">
+          <p className="mt-6 text-ink-soft text-lg max-w-4xl text-pretty">
             The journey doesn't happen in the showroom. It happens in living
             rooms, group chats, comment sections and quiet moments scrolling
             after midnight.
