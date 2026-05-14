@@ -124,13 +124,13 @@ function HomePage() {
 
       {/* THESIS */}
       <section className="relative bg-paper py-32 md:py-44">
-        <div className="mx-auto max-w-4xl px-6 lg:px-10 text-center flex flex-col items-center">
+        <div className="mx-auto max-w-6xl px-6 lg:px-10 text-center flex flex-col items-center">
           <div className="eyebrow text-ember mb-6">The thesis</div>
           <h2 className="font-display text-[clamp(2rem,5vw,4.5rem)] leading-[1.02] text-balance">
             The vehicle is not just a machine –<br />
             <span className="italic text-stone">it's the infrastructure for modern life.</span>
           </h2>
-          <p className="mt-10 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl text-pretty">
+          <p className="mt-10 text-lg md:text-xl text-ink-soft leading-relaxed max-w-4xl text-pretty">
             Today's buyers don't shop for trims and tow ratings. They shop for
             identity, freedom, and the version of themselves they're becoming.
             This study unpacks how that decision actually happens.
