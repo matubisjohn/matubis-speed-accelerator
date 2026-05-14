@@ -82,7 +82,7 @@ function HomePage() {
             className="font-display text-[clamp(2.75rem,8vw,8rem)] leading-[0.92] tracking-tight max-w-5xl text-balance"
           >
             Understanding<br />
-            the modern <span className="italic font-light text-paper/90">buyer.</span>
+            the <span className="italic font-light text-paper/90">modern</span> buyer.
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 24 }}
