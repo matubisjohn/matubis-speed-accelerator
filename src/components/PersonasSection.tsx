@@ -286,18 +286,15 @@ export function PersonasSection() {
                 transition={{ duration: 0.7, delay: (i % 3) * 0.08 }}
                 className="group text-left flex flex-col overflow-hidden rounded-3xl bg-paper shadow-elegant"
               >
-                <div className="relative aspect-[4/5] overflow-hidden bg-ink/5">
+                <div className="relative aspect-[4/3] overflow-hidden bg-ink/5">
                   <img
                     src={p.img}
                     alt={p.name}
                     loading="lazy"
-                    className="w-full h-full object-cover transition-transform duration-[900ms] group-hover:scale-[1.06]"
+                    className="w-full h-full object-cover object-center transition-transform duration-[900ms] group-hover:scale-[1.06]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent opacity-90" />
-                  <div className="absolute top-5 left-5 right-5 flex justify-between items-start">
-                    <span className="eyebrow text-paper bg-ink/30 backdrop-blur px-3 py-1.5 rounded-full">
-                      Persona {parseInt(p.id, 10)}
-                    </span>
+                  <div className="absolute top-5 right-5 flex justify-end">
                     <span className="text-paper/80 text-xs font-mono opacity-0 group-hover:opacity-100 transition-opacity">
                       Open →
                     </span>
