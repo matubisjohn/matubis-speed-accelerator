@@ -284,9 +284,9 @@ export function PersonasSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.7, delay: (i % 3) * 0.08 }}
-                className="group text-left"
+                className="group text-left flex flex-col overflow-hidden rounded-3xl bg-paper shadow-elegant"
               >
-                <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-ink/5">
+                <div className="relative aspect-[4/5] overflow-hidden bg-ink/5">
                   <img
                     src={p.img}
                     alt={p.name}
@@ -318,9 +318,11 @@ export function PersonasSection() {
                     </div>
                   </div>
                 </div>
-                <p className="mt-5 text-ink-soft text-sm leading-relaxed line-clamp-3 text-pretty">
-                  {p.snapshot}
-                </p>
+                <div className="bg-paper p-6 md:p-7">
+                  <p className="text-ink-soft text-sm leading-relaxed line-clamp-4 text-pretty">
+                    {p.snapshot}
+                  </p>
+                </div>
               </motion.button>
             ))}
           </div>
