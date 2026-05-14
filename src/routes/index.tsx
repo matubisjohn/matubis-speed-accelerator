@@ -82,7 +82,7 @@ function HomePage() {
             className="font-display text-[clamp(2.75rem,8vw,8rem)] leading-[0.92] tracking-tight max-w-5xl text-balance"
           >
             Understanding<br />
-            <span className="italic font-light text-paper/90">the modern</span> buyer.
+            the modern <span className="italic font-light text-paper/90">buyer.</span>
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -127,7 +127,7 @@ function HomePage() {
         <div className="mx-auto max-w-4xl px-6 lg:px-10 text-center flex flex-col items-center">
           <div className="eyebrow text-ember mb-6">The thesis</div>
           <h2 className="font-display text-[clamp(2rem,5vw,4.5rem)] leading-[1.02] text-balance">
-            The vehicle is not just a machine,
+            The vehicle is not just a machine –
             <span className="italic text-stone"> it's the infrastructure for modern life.</span>
           </h2>
           <p className="mt-10 text-lg md:text-xl text-ink-soft leading-relaxed max-w-2xl text-pretty">
