@@ -76,10 +76,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "A cinematic strategy showcase exploring the audiences, emotions, and decisions behind a new generation of automotive ownership." },
       { name: "author", content: "LDV Automotive" },
       { property: "og:title", content: "LDV Automotive — Understanding the Modern Buyer" },
-      { property: "og:description", content: "Audience personas and the emotional customer journey, presented as a premium interactive experience." },
+      { property: "og:description", content: "A cinematic strategy showcase exploring the audiences, emotions, and decisions behind a new generation of automotive ownership." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "LDV Automotive — Understanding the Modern Buyer" },
+      { name: "twitter:description", content: "A cinematic strategy showcase exploring the audiences, emotions, and decisions behind a new generation of automotive ownership." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3fab7024-0664-4b88-a2d4-bfc161c6d98d/id-preview-f8212b3a--846a4b62-e74f-4c85-8dca-0a3b84e4961d.lovable.app-1778827063250.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3fab7024-0664-4b88-a2d4-bfc161c6d98d/id-preview-f8212b3a--846a4b62-e74f-4c85-8dca-0a3b84e4961d.lovable.app-1778827063250.png" },
     ],
     links: [
       {
