@@ -178,11 +178,11 @@
 }
 
 @font-face {
-  font-family: 'Fraunces';
+  font-family: 'Space Grotesk';
   font-style: normal;
-  font-weight: 100 900;
+  font-weight: 300 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/fraunces/v36/6NUh8FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUUxjLA.woff2) format('woff2');
 }
 @font-face {
   font-family: 'Inter';
